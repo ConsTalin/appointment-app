@@ -1,0 +1,23 @@
+[
+    {"id": 1,
+    "client": "Laura Marcos",
+    "date": "2026-05-10",
+    "time": "10:00",
+    "service": "Haircut",
+    "status": "non-confirmed"
+    },
+    {"id": 2,
+    "client": "Pedro Rodríguez",
+    "date": "2026-05-12",
+    "time": "14:30",
+    "service": "Beard Trim",
+    "status": "confirmed"
+    },
+    {"id": 3,
+    "client": "Lorena Gómez",
+    "date": "2026-05-15",
+    "time": "09:00",
+    "service": "Hair Coloring",
+    "status": "non-confirmed"
+    }
+]
