@@ -19,11 +19,37 @@ app.get('/', (req, res) => {
 })
 
 
-//Ruta para obtener datos
+//Route to get appointments
 app.get("/api/appointments", (req, res) => {
   const dataPath = path.join(__dirname, "data", "appointments.json");
-  const data = fs.readFileSync(dataPath, "utf-8");
-  res.json(JSON.parse(data));
+  const appointments = fs.readFileSync(dataPath, "utf-8");
+  res.json(JSON.parse(appointments));
+});
+//Route to get users
+app.get("/api/users", (req, res) => {
+  const dataPath = path.join(__dirname, "data", "users.json");
+  const users = fs.readFileSync(dataPath, "utf-8");
+  res.json(JSON.parse(users));
+});
+
+//Endpoint login
+app.post("/api/login", (req, res) => {
+  try{
+      const {email, password} = req.body;
+      const dataPath = path.join(__dirname, "data", "users.json");
+      const users = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
+      const user = users.find(u => u.email === email && u.password === password);
+      if(!user){
+        return res.status(401).json({message: "Invalid credentials"});
+      }
+      res.json({message: "Login successful",
+      user: {id: user.id, name: user.name, email: user.email, token: "fake-jwt-token"}
+    });
+
+  }
+  catch(error){
+    res.status(500).json({message: "Internal server error"});
+  }
 });
 
 // Arrancar servidor

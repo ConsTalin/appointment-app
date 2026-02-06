@@ -1,0 +1,20 @@
+[
+    {"id": 1,
+    "worker": "Pablo Gómez",
+    "email": "123456@example.com",
+    "password": "123456",
+    "service": "Haircut"
+    },
+    {"id": 2,
+    "worker": "Sofía Martínez",
+    "email": "45689@example.com",
+    "password": "45689",
+    "service": "Beard Trim"
+    },
+    {"id": 3, 
+    "worker": "Carlos López",
+    "email": "78912@example.com",
+    "password": "78912",
+    "service": "Hair Coloring"
+    }
+]
