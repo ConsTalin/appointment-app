@@ -20,11 +20,15 @@ app.get('/', (req, res) => {
 
 
 //Route to get appointments
-app.get("/api/appointments", (req, res) => {
+app.get("/api/appointments/:userId", (req, res) => {
+  const {userId, role} = req.query;
   const dataPath = path.join(__dirname, "data", "appointments.json");
-  const appointments = fs.readFileSync(dataPath, "utf-8");
-  res.json(JSON.parse(appointments));
+  const appointments = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
+  const filteredAppointments = appointments.filter(a => role == "client" ? a.clientId ==userId : a.workerId == userId);
+  res.json(filteredAppointments);
 });
+
+
 //Route to get users
 app.get("/api/users", (req, res) => {
   const dataPath = path.join(__dirname, "data", "users.json");
@@ -43,7 +47,7 @@ app.post("/api/login", (req, res) => {
         return res.status(401).json({message: "Invalid credentials"});
       }
       res.json({message: "Login successful",
-      user: {id: user.id, name: user.name, email: user.email, token: "fake-jwt-token"}
+      user: {id: user.id, name: user.name, email: user.email, role: user.role , token: "fake-jwt-token"}
     });
 
   }

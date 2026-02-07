@@ -1,23 +1,29 @@
-[
-    {"id": 1,
-    "client": "Laura Marcos",
-    "date": "2026-05-10",
-    "time": "10:00",
-    "service": "Haircut",
-    "status": "non-confirmed"
-    },
-    {"id": 2,
-    "client": "Pedro Rodríguez",
-    "date": "2026-05-12",
-    "time": "14:30",
-    "service": "Beard Trim",
-    "status": "confirmed"
-    },
-    {"id": 3,
-    "client": "Lorena Gómez",
-    "date": "2026-05-15",
-    "time": "09:00",
-    "service": "Hair Coloring",
-    "status": "non-confirmed"
-    }
+[{
+    "id": 1,
+    "clientId": 3,
+    "workerId": 1,
+    "date": "2024-07-01T10:00:00",
+    "serviceId": "1"
+},
+{
+    "id": 2,
+    "clientId": 4,
+    "workerId": 2,
+    "date": "2024-07-02T11:00:00",
+    "serviceId": "2"
+},
+{
+    "id": 3,
+    "clientId": 5,
+    "workerId": 1,
+    "date": "2024-07-03T12:00:00",
+    "serviceId": "1"
+},
+{
+    "id": 4,
+    "clientId": 6,
+    "workerId": 2,
+    "date": "2024-07-04T13:00:00",
+    "serviceId": "2"
+}
 ]

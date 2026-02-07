@@ -1,0 +1,6 @@
+[
+    {"workerId": 1, "services":1},
+    {"workerId": 1, "services":2},
+    {"workerId": 2, "services":1},
+    {"workerId": 2, "services":3}  
+]

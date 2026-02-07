@@ -1,20 +1,38 @@
 [
     {"id": 1,
-    "worker": "Pablo Gómez",
+    "name": "Pablo Gómez",
     "email": "123456@example.com",
     "password": "123456",
-    "service": "Haircut"
+    "role": "worker"
     },
     {"id": 2,
-    "worker": "Sofía Martínez",
+    "name": "Sofía Martínez",
     "email": "45689@example.com",
     "password": "45689",
-    "service": "Beard Trim"
+    "role": "worker"
     },
     {"id": 3, 
-    "worker": "Carlos López",
+    "name": "Carlos López",
     "email": "78912@example.com",
     "password": "78912",
-    "service": "Hair Coloring"
+    "role": "client"
+}
+,    {"id": 4, 
+    "name": "Lucía Fernández",
+    "email": "101112@example.com",
+    "password": "101112",
+    "role": "client"
+    },
+    {"id": 5, 
+    "name": "Miguel Sánchez",
+    "email": "131415@example.com",
+    "password": "131415",
+    "role": "client"
+    },
+    {"id": 6, 
+    "name": "Ana Rodríguez",
+    "email": "161718@example.com",
+    "password": "161718",
+    "role": "client"
     }
 ]
