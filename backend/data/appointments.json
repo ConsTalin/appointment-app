@@ -3,27 +3,27 @@
     "clientId": 3,
     "workerId": 1,
     "date": "2024-07-01T10:00:00",
-    "serviceId": "1"
+    "serviceId": 1
 },
 {
     "id": 2,
     "clientId": 4,
     "workerId": 2,
     "date": "2024-07-02T11:00:00",
-    "serviceId": "2"
+    "serviceId": 2
 },
 {
     "id": 3,
     "clientId": 5,
     "workerId": 1,
     "date": "2024-07-03T12:00:00",
-    "serviceId": "1"
+    "serviceId": 1
 },
 {
     "id": 4,
     "clientId": 6,
     "workerId": 2,
     "date": "2024-07-04T13:00:00",
-    "serviceId": "2"
+    "serviceId": 2
 }
 ]

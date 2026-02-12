@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 
 //Route to get appointments
-app.get("/api/appointments/:userId", (req, res) => {
+app.get("/api/appointments", (req, res) => {
   const {userId, role} = req.query;
   const dataPath = path.join(__dirname, "data", "appointments.json");
   const appointments = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
@@ -34,6 +34,13 @@ app.get("/api/users", (req, res) => {
   const dataPath = path.join(__dirname, "data", "users.json");
   const users = fs.readFileSync(dataPath, "utf-8");
   res.json(JSON.parse(users));
+});
+
+//Route to get services
+app.get("/api/services", (req, res) => {
+  const dataPath = path.join(__dirname, "data", "services.json");
+  const services = fs.readFileSync(dataPath, "utf-8");
+  res.json(JSON.parse(services));
 });
 
 //Endpoint login
